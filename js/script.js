@@ -1,3 +1,6 @@
+document.getElementById("year").textContent = new Date().getFullYear();
+
+
 // Función para abrir la imagen en tamaño completo
 function openImage(img) {
   var modal = document.getElementById("modal");
@@ -10,4 +13,8 @@ function openImage(img) {
 function closeImage() {
   var modal = document.getElementById("modal");
   modal.style.display = "none"; // Oculta el modal
+}
+
+function searchItems() {
+  alert("Función de búsqueda en desarrollo...");
 }
