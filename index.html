@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Mundo de Mascotas</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
 </head>
+
 <body>
-  <header>
+  <div id="loading" class="loading">
+    <p>Cargando...</p>
+  </div>
+
+  <header id="header">
     <h1>Bienvenidos a Mi Mundo de Mascotas</h1>
     <div class="search-bar">
       <input type="text" placeholder="Buscar mascotas..." aria-label="Buscar">
       <button onclick="searchItems()">Buscar</button>
     </div>
-    
+
     <nav aria-label="Menú principal">
       <ul>
         <li><a href="#perros">Sección Perros</a></li>
@@ -23,18 +28,37 @@
         <li><a href="#pajaros">Sección Pájaros</a></li>
       </ul>
     </nav>
-
   </header>
+
+  <!-- Carrusel debajo del buscador -->
+  <section id="animal-carousel">
+    <h2>Descubre nuestras mascotas</h2>
+    <div class="carousel">
+      <img src="images/perro1.jpg" alt="Perro 1" class="carousel-image">
+      <img src="images/perro2.jpeg" alt="Perro 2" class="carousel-image">
+      <img src="images/perro3.jpeg" alt="Perro 2" class="carousel-image">
+      <img src="images/perro4.png" alt="Perro 2" class="carousel-image">
+      <img src="images/gato1.jpg" alt="Gato 1" class="carousel-image">
+      <img src="images/gato2.jpeg" alt="Gato 2" class="carousel-image">
+      <img src="images/gato3.jpg" alt="Gato 1" class="carousel-image">
+      <img src="images/gato4.jpeg" alt="Gato 2" class="carousel-image">
+      <img src="images/Agapornis1.jpg" alt="Pájaro 1" class="carousel-image">
+      <img src="images/periquito1.jpg" alt="Pájaro 2" class="carousel-image">
+      <img src="images/pajaro3.jpg" alt="Pájaro 1" class="carousel-image">
+      <img src="images/pajaro4.jpg" alt="Pájaro 2" class="carousel-image">
+    </div>
+  </section>
 
   <main>
     <section id="perros">
       <h2>Perros</h2>
       <p>¡Descubre a nuestras adorables mascotas de cuatro patas!</p>
       <div class="gallery">
-        <img src="images/perro1.jpg" alt="Perro 1" class="image" onclick="openImage(this)">
-        <img src="images/perro2.jpeg" alt="Perro 2" class="image" onclick="openImage(this)">
+        <img src="images/perro1.jpg" alt="Perro 1" class="image" onclick="openImage(this)" loading="lazy">
+        <img src="images/perro2.jpeg" alt="Perro 2" class="image" onclick="openImage(this)" loading="lazy">
+        <img src="images/perro3.jpeg" alt="Perro 2" class="image" onclick="openImage(this)" loading="lazy">
+        <img src="images/perro4.png" alt="Perro 2" class="image" onclick="openImage(this)" loading="lazy">
         <a href="#top" class="back-to-top">Volver arriba</a>
-
       </div>
     </section>
 
@@ -42,10 +66,11 @@
       <h2>Gatos</h2>
       <p>¡Los gatos también son parte de nuestro mundo!</p>
       <div class="gallery">
-        <img src="images/gato1.jpg" alt="Gato 1" class="image" onclick="openImage(this)">
-        <img src="images/gato2.jpeg" alt="Gato 2" class="image" onclick="openImage(this)">
+        <img src="images/gato1.jpg" alt="Gato 1" class="image" onclick="openImage(this)" loading="lazy">
+        <img src="images/gato2.jpeg" alt="Gato 2" class="image" onclick="openImage(this)" loading="lazy">
+        <img src="images/gato3.jpg" alt="Gato 2" class="image" onclick="openImage(this)" loading="lazy">
+        <img src="images/gato4.jpeg" alt="Gato 2" class="image" onclick="openImage(this)" loading="lazy">
         <a href="#top" class="back-to-top">Volver arriba</a>
-
       </div>
     </section>
 
@@ -53,9 +78,11 @@
       <h2>Pajaros</h2>
       <p>Tenemos muchos más animales adorables, ¡mira algunos de ellos!</p>
       <div class="gallery">
-        <img src="images/Agapornis1.jpg" alt="pajaro1" class="image" onclick="openImage(this)">
-        <img src="images/periquito1.jpg" alt="pajaro2" class="image" onclick="openImage(this)"> <a href="#top" class="back-to-top">Volver arriba</a>
-
+        <img src="images/Agapornis1.jpg" alt="pajaro1" class="image" onclick="openImage(this)" loading="lazy">
+        <img src="images/periquito1.jpg" alt="pajaro2" class="image" onclick="openImage(this)" loading="lazy">
+        <img src="images/pajaro3.jpg" alt="pajaro2" class="image" onclick="openImage(this)" loading="lazy">
+        <img src="images/pajaro4.jpg" alt="pajaro2" class="image" onclick="openImage(this)" loading="lazy">
+        <a href="#top" class="back-to-top">Volver arriba</a>
       </div>
     </section>
   </main>
@@ -67,9 +94,9 @@
 
   <footer>
     <p>© <span id="year"></span> Mi Mundo de Mascotas</p>
-
   </footer>
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
